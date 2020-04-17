@@ -1,0 +1,6 @@
+# SBIN
+SBIN="/usr/local/sbin"
+
+path=($SBIN)
+
+export PATH

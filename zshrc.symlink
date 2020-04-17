@@ -1,0 +1,37 @@
+############################################
+# Usama Saddiq's Dofiles                   #
+# V1: 17/04/2020                           #
+# Last Changed: 17/04/2020                 #
+############################################
+
+# all of our zsh files
+typeset -U config_files
+config_files=($HOME/dotfiles/*.zsh)
+
+# load the path files
+for file in ${(M)config_files}
+do
+  source $file
+done
+
+# fuzzy dir navigation
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(rbenv init -)"
+export LIBRARY_PATH=:/usr/local/opt/openssl/lib/
+eval "$(nodenv init -)"
+
+# Remove duplicate path entries
+if [ -n "$PATH" ]; then
+  old_PATH=$PATH:; PATH=
+  while [ -n "$old_PATH" ]; do
+    x=${old_PATH%%:*}       # the first remaining entry
+    case $PATH: in
+      *:"$x":*) ;;          # already there
+      *) PATH=$PATH:$x;;    # not there yet
+    esac
+    old_PATH=${old_PATH#*:}
+  done
+  PATH=${PATH#:}
+  unset old_PATH x
+fi
