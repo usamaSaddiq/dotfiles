@@ -82,7 +82,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 #####################################################################################
 
 # Easier terminal reloading
-alias rl="source ~/.zshrc"
+alias reload="source ~/.zshrc"
 
 # Always enable colored `grep` output
 alias grep='grep --color=auto'

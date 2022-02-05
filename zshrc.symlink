@@ -4,44 +4,6 @@
 # Last Changed: 05/02/2022                 #
 ############################################
 
-echo
-echo "Setting up your development environment..."
-echo "Checking if brew exists..."
-
-if ! type "brew" > /dev/null; then
-  echo "Couldn't find brew. Installing via sh -c 'curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)'"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
-
-echo "brew executable found!"
-echo "Running 'brew bundle' on the Brewfile"
-
-brew bundle
-
-echo "Successfully installed brew dependencies."
-
-echo
-echo "Now installing oh-my-zsh..."
-echo "Please note you might need to update the remote url if it's changed since the time you last installed."
-
-echo "ZSH will be installed at ~/dotfiles/.oh-my-zsh"
-
-echo "Checking if $HOME/dotfiles/oh-my-zsh/ exists..."
-
-if [ ! -d "$HOME/dotfiles/oh-my-zsh/" ]; then
-  echo "$HOME/dotfiles/oh-my-zsh/ not found, installing oh-my-zsh using  using 'sh -c curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh'"
-  
-  ZSH="$HOME/dotfiles/oh-my-zsh" sh -c \
-    "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  
-  echo "Successfully installed ZSH"
-fi
-
-echo "$HOME/dotfiles/oh-my-zsh/ already exists!"
-
-echo
-echo "Now loading all your zsh files...."
-
 # all of our zsh files
 typeset -U config_files
 config_files=($HOME/dotfiles/*.zsh)
@@ -51,23 +13,14 @@ for file in ${(M)config_files}
 do
   source $file
 done
-echo "Successfully loaded all the ZSH files and oh-my-zsh"
-
-echo 
-echo "Now setting up fuzzy dir navigation."
 
 # fuzzy dir navigation
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-echo 
-echo "Initialising ruby and node environments..."
 eval "$(rbenv init -)"
 export LIBRARY_PATH=:/usr/local/opt/openssl/lib/
 eval "$(nodenv init -)"
-echo "Ruby and node setup successful!! Now doing some cleanup!"
 
-echo
-echo "Deleting duplicate executales from PATH"
 # Remove duplicate path entries
 if [ -n "$PATH" ]; then
   old_PATH=$PATH:; PATH=
@@ -83,10 +36,6 @@ if [ -n "$PATH" ]; then
   unset old_PATH x
 fi
 
-echo "Success"
-echo
-
-echo "Now setting up some custom keybindings and utils!"
 ################################################
 # Key Bindings                                 #
 ################################################
@@ -101,9 +50,4 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   bindkey '\e\e[C' forward-word
 fi
 
-echo "Keybindings successfully setup!"
-
-echo "Nearly done..."
-echo "Shell setup success!"
-echo "Try 'rl' to confirm everything has loaded fine."
-
+echo "Success!"

@@ -12,7 +12,13 @@ Please clone this repository into your `$HOME` directory. If you don't, the boos
 Once you've cloned the respository, the please run the following and wait for the magic to happen.
 
 ```bash
-cd ~/
-source zshrc.symlink
-# Watch the magic happen.
+# First establish a symlink
+$ ln -fs ~/dotfiles/zshrc.symlink ~/.zshrc
+
+$ cd ~/dotfiles
+# Bootstrap any dependencies
+$ zsh bootstrap.sh
+
+# Load .zshrc
+source ~/.zshrc
 ```
