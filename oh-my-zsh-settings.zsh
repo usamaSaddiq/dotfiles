@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/usama/.oh-my-zsh"
+export ZSH="$HOME/dotfiles/oh-my-zsh/"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,13 +68,12 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
-  ruby 
-  colorize 
-  brew 
-  osx 
-  zsh-syntax-highlighting 
-  zsh-autosuggestions 
+plugins=(
+  git
+  ruby
+  colorize
+  brew
+  macos
   battery
   emoji-clock
 )
