@@ -8,6 +8,7 @@
 alias b="bundle"
 alias be="bundle exec"
 alias ber="bundle exec rails"
+alias berc="bundle exec rubocop"
 alias berk="bundle exec rake"
 alias berg="bundle exec rails generate"
 
