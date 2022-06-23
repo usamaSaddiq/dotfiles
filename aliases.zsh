@@ -2,6 +2,20 @@
 # Navigation                                                                        #
 #####################################################################################
 
+#####################################################################################
+# Rails + Bundler                                                                   #
+#####################################################################################
+alias b="bundle"
+alias be="bundle exec"
+alias ber="bundle exec rails"
+alias berk="bundle exec rake"
+alias berg="bundle exec rails generate"
+
+alias br="bin/rails"
+alias brk="bin/rake"
+alias brr="bin/rails routes"
+alias brg="bin/rails generate"
+
 # Although oh-my-zsh offers some of these out of the box, 
 # redefining some for clairty.
 # Easier navigation: .., ..., ...., ....., ~ and -
