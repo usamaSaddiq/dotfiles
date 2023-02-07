@@ -51,4 +51,3 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 echo "Success!"
-. /opt/homebrew/opt/asdf/libexec/asdf.sh

@@ -6,8 +6,8 @@ echo "Setting up your development environment..."
 echo "Checking if brew exists..."
 
 if ! type "brew" > /dev/null; then
-  echo "Couldn't find brew. Installing via sh -c 'curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)'"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "Couldn't find brew. Installing via bash -c 'curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)'"
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 echo "brew executable found!"
