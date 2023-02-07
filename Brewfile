@@ -22,6 +22,7 @@ brew 'tig'
 brew 'tmux'
 brew 'fzf'
 brew 'ag'
+brew 'hub'
 
 cask '1password'
 cask '1password-cli'
