@@ -20,6 +20,10 @@ done
 eval "$(rbenv init -)"
 export LIBRARY_PATH=:/usr/local/opt/openssl/lib/
 eval "$(nodenv init -)"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+export EDITOR=code
 
 # Remove duplicate path entries
 if [ -n "$PATH" ]; then

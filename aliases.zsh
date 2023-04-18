@@ -19,6 +19,10 @@ alias brt="bin/rails test"
 alias brr="bin/rails routes"
 alias brg="bin/rails generate"
 
+
+alias pda="RALS_ENV=development bin/rails assets:precompile"
+alias pta="RALS_ENV=test bin/rails assets:precompile"
+
 # Although oh-my-zsh offers some of these out of the box, 
 # redefining some for clairty.
 # Easier navigation: .., ..., ...., ....., ~ and -
