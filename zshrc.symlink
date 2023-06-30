@@ -18,7 +18,7 @@ done
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(rbenv init -)"
-export LIBRARY_PATH=:/usr/local/opt/openssl/lib/
+# export LIBRARY_PATH=:/usr/local/opt/openssl/lib/
 eval "$(nodenv init -)"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
