@@ -18,12 +18,15 @@ done
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(rbenv init -)"
-# export LIBRARY_PATH=:/usr/local/opt/openssl/lib/
 eval "$(nodenv init -)"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 export EDITOR=code
+# For spring
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=yes
+
 
 # Remove duplicate path entries
 if [ -n "$PATH" ]; then
