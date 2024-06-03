@@ -26,6 +26,8 @@ export PATH="$HOME/go/bin:$PATH"
 export EDITOR=code
 # For spring
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=yes
+# Unified git timezones
+export TZ=UTC
 
 
 # Remove duplicate path entries
