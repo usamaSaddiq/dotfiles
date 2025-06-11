@@ -29,6 +29,13 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=yes
 # Unified git timezones
 export TZ=UTC
 
+#asdf
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+# append completions to fpath
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
 
 # Remove duplicate path entries
 if [ -n "$PATH" ]; then

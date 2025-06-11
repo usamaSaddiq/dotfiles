@@ -20,6 +20,7 @@ alias berk="bundle exec rake"
 alias berg="bundle exec rails generate"
 
 alias br="bin/rails"
+alias brs="bin/rspec"
 alias brk="bin/rake"
 alias brt="bin/rails test"
 alias brr="bin/rails routes"
