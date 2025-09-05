@@ -21,4 +21,7 @@ $ zsh bootstrap.sh
 
 # Load .zshrc
 source ~/.zshrc
+
+# Symlink VSCode keybindings
+ln -fs ~/dotfiles/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 ```
