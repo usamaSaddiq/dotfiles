@@ -67,3 +67,17 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 echo "Success!"
+
+
+### AWS
+function awsauth {
+  /Users/usaddiq/src/aws-auth-bash/auth.sh "$@";
+  script_result="$?"
+
+  [[ -r "$HOME/.aws/sessiontoken" ]] && . "$HOME/.aws/sessiontoken";
+
+  return "$script_result"
+}
+export -f awsauth > /dev/null;
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
