@@ -41,6 +41,28 @@ alias hme="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 #####################################################################################
+# Docker                                                                   					#
+#####################################################################################
+
+# docker
+alias d="docker"
+alias de="docker exec"
+alias dr="docker run"
+alias dps="docker ps"
+
+# docker-compose
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
+alias dcb="docker-compose build"
+alias dcr="docker-compose restart"
+alias dcp="docker-compose pull"
+alias dcpu="docker-compose push"
+alias dcs="docker-compose stop"
+alias dcl="docker-compose logs"
+alias dck="docker-compose kill"
+alias dcls="docker-compose ls"
+
+#####################################################################################
 # Change DIR                                                                        #
 #####################################################################################
 alias dl="cd ~/Downloads"
