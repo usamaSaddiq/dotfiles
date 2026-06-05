@@ -1,0 +1,10 @@
+{
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
+  },
+  "theme": "dark",
+  "statusLine": {
+    "type": "command",
+    "command": "bash /Users/usamasaddiq/.claude/statusline-command.sh"
+  }
+}
