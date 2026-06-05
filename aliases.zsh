@@ -68,6 +68,8 @@ alias dcls="docker-compose ls"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias src="cd ~/src"
+alias work="cd ~/src/work"
+alias personal="cd ~/src/personal"
 
 #####################################################################################
 # List files                                                                        #
